@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="flex justify-center flex-col">
-        {!user ? <LoginForm setUser={setUser} /> : <div></div>}
+        {!user ? <LoginForm setUser={setUser} /> : <div>hello {user}</div>}
       </div>
     </>
   );
