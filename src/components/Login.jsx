@@ -1,15 +1,25 @@
 import { useState } from 'react';
 import { Leaf } from 'lucide-react';
+import Button from './shared/Button';
+import { useNavigate } from 'react-router';
 
 const LoginForm = ({ setUser }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate();
+
   const handleLogin = async (event) => {
+    if (username.length < 1 || password.length < 1) {
+      alert('username or password is too short');
+      return;
+    }
     event.preventDefault();
     setUser(username);
+    localStorage.setItem('user', username);
     setUsername('');
     setPassword('');
+    navigate('/home');
   };
 
   return (
@@ -43,12 +53,11 @@ const LoginForm = ({ setUser }) => {
               />
             </div>
             <div className="flex justify-end">
-              <button
+              <Button
                 className="border-1 px-3 py-1 rounded-lg cursor-pointer mt-5"
-                type="submit"
-              >
-                login
-              </button>
+                buttonType="submit"
+                text="login"
+              />
             </div>
           </form>
         </div>
