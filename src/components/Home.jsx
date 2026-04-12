@@ -2,8 +2,19 @@ import { Leaf, User, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router';
 import Card from './Card';
 
-const Home = ({ setUser, user, blogs }) => {
+const Home = ({ setUser, user, blogs = [] }) => {
   const navigate = useNavigate();
+
+  const generatedBlogs = blogs.length
+    ? Array.from({ length: 51 }, (_, i) => ({
+        ...blogs[i % blogs.length],
+        id: i + 1,
+        // eslint-disable-next-line react-hooks/purity
+        likes: Math.floor(Math.random() * 300),
+        // eslint-disable-next-line react-hooks/purity
+        replies: Math.floor(Math.random() * 50),
+      }))
+    : [];
 
   function handleLogout() {
     localStorage.removeItem('user');
@@ -17,9 +28,12 @@ const Home = ({ setUser, user, blogs }) => {
         <div className="bg-[#35ba32] rounded-full p-3 mx-10">
           <Leaf className="text-white" />
         </div>
-        <p className="text-lg font-bold">Nature blog</p>
+        <p className="text-2xl font-bold">Nature blog</p>
         <div className="flex items-center ml-auto gap-10  mr-10">
-          <button className="flex gap-1 cursor-pointer hover:bg-gray-200">
+          <button
+            onClick={() => navigate('/profile')}
+            className="flex gap-1 cursor-pointer hover:bg-gray-200"
+          >
             <User />
             profile
           </button>
@@ -32,10 +46,10 @@ const Home = ({ setUser, user, blogs }) => {
           </button>
         </div>
       </div>
-      <div className="px-10">
-        <div className="flex flex-col gap-2 mt-20">
+      <div className="px-10 mb-20">
+        <div className="flex flex-col gap-2 my-20">
           <h1 className="text-3xl font-bold">Welcome back, {user}!</h1>
-          <p className="text-lg font-light">Explore the posts below</p>
+          <p className="text-lg font-light">Explore the newest posts below</p>
         </div>
         {!blogs ? (
           <div className="flex items-center justify-center">Loading...</div>
@@ -46,6 +60,23 @@ const Home = ({ setUser, user, blogs }) => {
             ))}
           </div>
         )}
+        <div className="flex flex-col mt-20 gap-7 items-center">
+          <h3 className="text-3xl font-bold">Video of the week</h3>
+          <video src="/naturevideo.mp4" preload="auto" controls></video>
+        </div>
+        <div className="flex flex-col gap-7 mt-20">
+          <h3 className="text-3xl font-bold">Browse more exciting videos!</h3>
+
+          {!blogs ? (
+            <div className="flex items-center justify-center">Loading...</div>
+          ) : (
+            <div className="grid grid-cols-3 gap-2">
+              {generatedBlogs.map((blog) => (
+                <Card key={blog.id} blog={blog} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
