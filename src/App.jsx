@@ -6,25 +6,26 @@ import Profile from './components/Profile';
 import ProtectedRoute from './util/ProtectedRoute';
 import { Routes, Route, BrowserRouter } from 'react-router';
 import { fetchData } from './util/fetchData';
+import { Navigate } from 'react-router';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState('Testuser');
   const [blogs, setBlogs] = useState([]);
 
-  function burnCPU(ms) {
-    const start = performance.now();
-    while (performance.now() - start < ms) {
-      Math.sqrt(Math.random());
-    }
-  }
+  // function burnCPU(ms) {
+  //   const start = performance.now();
+  //   while (performance.now() - start < ms) {
+  //     Math.sqrt(Math.random());
+  //   }
+  // }
 
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user');
-    if (savedUser) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setUser(savedUser);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedUser = localStorage.getItem('user');
+  //   if (savedUser) {
+  //     // eslint-disable-next-line react-hooks/set-state-in-effect
+  //     setUser(savedUser);
+  //   }
+  // }, []);
 
   useEffect(() => {
     fetchData().then((blogs) => {
@@ -32,20 +33,22 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {
-    burnCPU(60);
-  });
+  // useEffect(() => {
+  //   burnCPU(60);
+  // });
 
   return (
     <>
       <div className="flex justify-center flex-col">
-        {/* {!user ? (
-          <LoginForm setUser={setUser} />
-        ) : (
-          <Home setUser={setUser} user={user} blogs={blogs} />
-        )} */}
         <BrowserRouter>
           <Routes>
+            <Route
+              path="/"
+              element={
+                user ? <Navigate to="/home" /> : <Navigate to={'/login'} />
+              }
+            />
+
             <Route path="/login" element={<LoginForm setUser={setUser} />} />
             <Route
               path="/home"

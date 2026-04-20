@@ -6,7 +6,7 @@ const Home = ({ setUser, user, blogs = [] }) => {
   const navigate = useNavigate();
 
   const generatedBlogs = blogs.length
-    ? Array.from({ length: 51 }, (_, i) => ({
+    ? Array.from({ length: 301 }, (_, i) => ({
         ...blogs[i % blogs.length],
         id: i + 1,
         // eslint-disable-next-line react-hooks/purity
@@ -65,7 +65,7 @@ const Home = ({ setUser, user, blogs = [] }) => {
           <video src="/naturevideo.mp4" preload="auto" controls></video>
         </div>
         <div className="flex flex-col gap-7 mt-20">
-          <h3 className="text-3xl font-bold">Browse more exciting videos!</h3>
+          <h3 className="text-3xl font-bold">Browse more exciting posts!</h3>
 
           {!blogs ? (
             <div className="flex items-center justify-center">Loading...</div>

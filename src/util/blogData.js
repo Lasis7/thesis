@@ -77,7 +77,7 @@ export const cardData = [
   {
     id: 6,
     title: 'Savannah Hiking Trip',
-    description: 'Latest trip through Africa.',
+    description: 'Our latest trip through Africa.',
     image:
       'https://images.unsplash.com/photo-1502082553048-f009c37129b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
     imageAlt: 'Savannah Hiking Trip',
