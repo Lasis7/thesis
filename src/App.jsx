@@ -3,6 +3,7 @@ import './App.css';
 import LoginForm from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
+import Gallery from './components/Gallery';
 import ProtectedRoute from './util/ProtectedRoute';
 import { Routes, Route, BrowserRouter } from 'react-router';
 import { fetchData } from './util/fetchData';
@@ -12,12 +13,12 @@ function App() {
   const [user, setUser] = useState('Testuser');
   const [blogs, setBlogs] = useState([]);
 
-  // function burnCPU(ms) {
-  //   const start = performance.now();
-  //   while (performance.now() - start < ms) {
-  //     Math.sqrt(Math.random());
-  //   }
-  // }
+  function burnCPU(ms) {
+    const start = performance.now();
+    while (performance.now() - start < ms) {
+      Math.sqrt(Math.random());
+    }
+  }
 
   // useEffect(() => {
   //   const savedUser = localStorage.getItem('user');
@@ -33,9 +34,9 @@ function App() {
     });
   }, []);
 
-  // useEffect(() => {
-  //   burnCPU(60);
-  // });
+  useEffect(() => {
+    burnCPU(120);
+  });
 
   return (
     <>
@@ -55,6 +56,14 @@ function App() {
               element={
                 <ProtectedRoute user={user} setUser={setUser}>
                   <Home setUser={setUser} user={user} blogs={blogs} />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/gallery"
+              element={
+                <ProtectedRoute user={user} setUser={setUser}>
+                  <Gallery />
                 </ProtectedRoute>
               }
             />
