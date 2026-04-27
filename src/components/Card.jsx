@@ -22,6 +22,7 @@ const Card = ({ blog }) => {
           src={blog.image}
           alt={blog.imageAlt}
           className="rounded-t-md w-full h-48 object-cover"
+          loading="lazy"
         />
         <div className="flex flex-col gap-2 ml-2 mt-5">
           <p className="text-lg font-semibold">{blog.title}</p>
