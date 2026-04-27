@@ -65,7 +65,7 @@ const Home = ({ setUser, user, blogs = [] }) => {
         ) : (
           <div className="grid grid-cols-3 gap-2">
             {blogs.map((blog) => (
-              <Card key={blog.id} blog={blog} />
+              <Card key={blog.id} blog={blog} isLazy={'eager'} />
             ))}
           </div>
         )}
@@ -85,7 +85,7 @@ const Home = ({ setUser, user, blogs = [] }) => {
           ) : (
             <div className="grid grid-cols-3 gap-2">
               {generatedBlogs.map((blog) => (
-                <Card key={blog.id} blog={blog} />
+                <Card key={blog.id} blog={blog} isLazy={'lazy'} />
               ))}
             </div>
           )}

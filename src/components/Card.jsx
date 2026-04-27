@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Heart, MessageCircle } from 'lucide-react';
 
-const Card = ({ blog }) => {
+const Card = ({ blog, isLazy }) => {
   const [likes, setLikes] = useState(blog.likes);
   const [liked, setLiked] = useState(false);
 
@@ -22,7 +22,7 @@ const Card = ({ blog }) => {
           src={blog.image}
           alt={blog.imageAlt}
           className="rounded-t-md w-full h-48 object-cover"
-          loading="lazy"
+          loading={isLazy}
         />
         <div className="flex flex-col gap-2 ml-2 mt-5">
           <p className="text-lg font-semibold">{blog.title}</p>
