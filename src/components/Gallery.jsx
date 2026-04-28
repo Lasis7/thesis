@@ -30,7 +30,7 @@ export default function Gallery() {
           {Array.from({ length: 100 }).map((_, i) => (
             <img
               key={i}
-              src="/beachgallery.jpg"
+              src="/beachgallery.webp"
               alt="beach"
               width={500}
               height={500}

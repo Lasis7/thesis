@@ -71,7 +71,7 @@ const Home = ({ setUser, user, blogs = [] }) => {
         )}
         <div className="flex flex-col mt-20 gap-7 items-center">
           <h3 className="text-3xl font-bold">Photo of the week</h3>
-          <img src="POTW3.jpg" className="w-160 h-90 object-cover" />
+          <img src="POTW3.webp" className="w-160 h-90 object-cover" />
         </div>
         <div className="flex flex-col mt-20 gap-7 items-center">
           <h3 className="text-3xl font-bold">Video of the week</h3>
