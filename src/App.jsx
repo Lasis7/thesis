@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import './App.css';
-import LoginForm from './components/Login';
 import Home from './components/Home';
-import Profile from './components/Profile';
-import Gallery from './components/Gallery';
-import ProtectedRoute from './util/ProtectedRoute';
 import { Routes, Route, BrowserRouter } from 'react-router';
 import { fetchData } from './util/fetchData';
 import { Navigate } from 'react-router';
+
+const ProtectedRoute = lazy(() => import('./util/ProtectedRoute'));
+const Login = lazy(() => import('./components/Login'));
+const Profile = lazy(() => import('./components/Profile'));
+const Gallery = lazy(() => import('./components/Gallery'));
 
 function App() {
   const [user, setUser] = useState('Testuser');
@@ -42,40 +43,44 @@ function App() {
     <>
       <div className="flex justify-center flex-col">
         <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                user ? <Navigate to="/home" /> : <Navigate to={'/login'} />
-              }
-            />
+          <Suspense
+            fallback={<div className="text-2xl font-bold">Loading...</div>}
+          >
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  user ? <Navigate to="/home" /> : <Navigate to={'/login'} />
+                }
+              />
 
-            <Route path="/login" element={<LoginForm setUser={setUser} />} />
-            <Route
-              path="/home"
-              element={
-                <ProtectedRoute user={user} setUser={setUser}>
-                  <Home setUser={setUser} user={user} blogs={blogs} />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/gallery"
-              element={
-                <ProtectedRoute user={user} setUser={setUser}>
-                  <Gallery />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/profile"
-              element={
-                <ProtectedRoute user={user} setUser={setUser}>
-                  <Profile user={user} />
-                </ProtectedRoute>
-              }
-            />
-          </Routes>
+              <Route path="/login" element={<Login setUser={setUser} />} />
+              <Route
+                path="/home"
+                element={
+                  <ProtectedRoute user={user} setUser={setUser}>
+                    <Home setUser={setUser} user={user} blogs={blogs} />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/gallery"
+                element={
+                  <ProtectedRoute user={user} setUser={setUser}>
+                    <Gallery />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute user={user} setUser={setUser}>
+                    <Profile user={user} />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </div>
     </>

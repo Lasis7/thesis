@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { Leaf } from 'lucide-react';
-import Button from './shared/Button';
 import { useNavigate } from 'react-router';
+
+const Button = lazy(() => import('./shared/Button'));
 
 const LoginForm = ({ setUser }) => {
   const [username, setUsername] = useState('');
@@ -53,11 +54,15 @@ const LoginForm = ({ setUser }) => {
               />
             </div>
             <div className="flex justify-end">
-              <Button
-                className="border-1 px-3 py-1 rounded-lg cursor-pointer mt-5"
-                buttonType="submit"
-                text="login"
-              />
+              <Suspense
+                fallback={<div className="text-2xl font-bold">Loading...</div>}
+              >
+                <Button
+                  className="border-1 px-3 py-1 rounded-lg cursor-pointer mt-5"
+                  buttonType="submit"
+                  text="login"
+                />
+              </Suspense>
             </div>
           </form>
         </div>
