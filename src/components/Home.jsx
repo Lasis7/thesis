@@ -79,7 +79,7 @@ const Home = ({ setUser, user, blogs = [] }) => {
         </div>
         <div className="flex flex-col mt-20 gap-7 items-center">
           <h3 className="text-3xl font-bold">Video of the week</h3>
-          <video src="/naturevideo.mp4" preload="metadata" controls></video>
+          <video src="/VOTW.mp4" preload="metadata" controls></video>
         </div>
         <div className="flex flex-col gap-7 mt-20">
           <h3 className="text-3xl font-bold">Browse more exciting posts!</h3>
