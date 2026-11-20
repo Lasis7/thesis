@@ -24,7 +24,37 @@ Below is a rough list of steps to be taken if new measurements are performed usi
 4. When measuring PWA-application, also change **CPU throttling** to **4x slowdown**
 5. Repeat each measurement **5** times and calculate an average for each measurement category
 
+## Credits
+
+**Images used on this project are sourced from Unsplash and Pexels and used under their respective licenses. Each image is referenced by its name in this project, followed with links to the uploader and the original image. The video is used under CC BY license**
+**For more information about licenses:** 
+- [Unsplash license](unsplash.com/license)
+- [Pexels license](https://www.pexels.com/license/)
+- [CC BY](https://creativecommons.org/licenses/by/4.0/)
+
+
+**"POTW3.jpg"**: Image by [Greg Rakozy](https://unsplash.com/@grakozy), uploaded to [Unsplash](https://unsplash.com/photos/silhouette-photography-of-person-oMpAz-DN-9I)
+
+**"beachgallery.jpg"**: Image by [Asad Photo Maldives](https://www.pexels.com/@asadphoto/), uploaded to [Pexels](https://www.pexels.com/photo/beach-1449767/)
+
+**"Clear Water Standstill"**: Image by [Pietro De Grandi](https://unsplash.com/@peter_mc_greats), uploaded to [Unsplash](https://unsplash.com/photos/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime-T7K4aEPoGGk)
+
+**"Rocky Canyon Pass"**: Image by [Jake Blucker](https://unsplash.com/@jakeblucker), uploaded to [Unsplash](https://unsplash.com/photos/black-concrete-road-surrounded-by-brown-rocks-tMzCrBkM99Y)
+
+**"Golden Sunset Beach"**: Image by [Sean Oulashin](https://unsplash.com/@oulashin), uploaded to [Unsplash](https://unsplash.com/photos/seashore-during-golden-hour-KMn4VEeEPR8)
+
+**Autumn Mist**: Image by [Luca Bravo](https://unsplash.com/@lucabravo), uploaded to [Unsplash](https://unsplash.com/photos/brown-house-near-body-of-water-zAjdgNXsMeg)
+
+**"Eye-catching Sunrise"**: Image by [Bailey Zindel](https://unsplash.com/@baileyzindel), uploaded to [Unsplash](https://unsplash.com/photos/river-in-yosemite-valley-at-low-light-NRQV-hBF10M)
+
+**"Savannah Hiking Trip"**: Image by [niko photos](https://unsplash.com/@niko_photos), uploaded to [Unsplash](https://unsplash.com/photos/green-leaf-tree-under-blue-sky-tGTVxeOr_Rs)
+
+
+
+The video material has been kindly provided by HikingFex.com.
+🔗 https://www.hikingfex.com/en/videos
+Link to the used video: [Mountain Life | No Copyright Video | Royalty free mountain | Drone footage | mountain shots](https://youtu.be/ZK_kdlCo4yY?si=vb8jpkSDw_gzTPw9)
+
+
 
 **Last updated 20.11.2026**
-
-
