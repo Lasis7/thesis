@@ -27,7 +27,7 @@ Below is a rough list of steps to be taken if new measurements are performed usi
 ## Credits
 
 **Images used on this project are sourced from Unsplash and Pexels and used under their respective licenses. Each image is referenced by its name in this project, followed with links to the uploader and the original image. The video is used under CC BY license**
-**For more information about licenses:** 
+**For more information**: 
 - [Unsplash license](unsplash.com/license)
 - [Pexels license](https://www.pexels.com/license/)
 - [CC BY](https://creativecommons.org/licenses/by/4.0/)
@@ -56,5 +56,10 @@ The video material has been kindly provided by HikingFex.com.
 Link to the used video: [Mountain Life | No Copyright Video | Royalty free mountain | Drone footage | mountain shots](https://youtu.be/ZK_kdlCo4yY?si=vb8jpkSDw_gzTPw9)
 
 
+**Libraries used in the application fall under MIT and ISC licenses, which permit use, copy, modify and/or distribution.**
+**For more information**:
+[MIT License](https://opensource.org/license/mit)
+[ISC License](https://opensource.org/license/isc)
 
-**Last updated 20.11.2026**
+
+**Last updated 25.11.2026**
