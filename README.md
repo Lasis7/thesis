@@ -14,11 +14,11 @@ As mentioned, the study only included frontend-based, cold start techniques. Oth
 - Lazy: added lazy loading for blogs via `loading`-property
 - PWA: Service worker registeration, PWA configuration, such as caching and manifest, icons used by PWA
 
-## Performing measurements
+## Performing the measurements
 
 Below is a rough list of steps to be taken if new measurements are performed using this test application. PWA-application in particular has some limitations which should be noted. Check the thesis for more information
 
-1. `npm run build`(built application acts more like an actual application and it also applies some default optimization to the application, which doesn't happen when `npm run dev` is used)
+1. `npm run build` (built application acts more like an actual application and it also applies some default optimization to the application, which doesn't happen when `npm run dev` is used)
 2. Open Google Chrome in Incognito mode, open dev tools and turn on **Disable cache**
 3. Change **Network throttling** to **Fast 4G**
 4. When measuring PWA-application, also change **CPU throttling** to **4x slowdown**
@@ -26,40 +26,40 @@ Below is a rough list of steps to be taken if new measurements are performed usi
 
 ## Credits
 
-**Images used on this project are sourced from Unsplash and Pexels and used under their respective licenses. Each image is referenced by its name in this project, followed with links to the uploader and the original image. The video is used under CC BY license**
+**Images used on this project are sourced from Unsplash and Pexels and used under their respective licenses. Each image is referenced by its name in this project, followed with links to the uploader and the original image. The video is used under CC BY license.**  
 **For more information**: 
 - [Unsplash license](unsplash.com/license)
 - [Pexels license](https://www.pexels.com/license/)
 - [CC BY](https://creativecommons.org/licenses/by/4.0/)
 
 
-**"POTW3.jpg"**: Image by [Greg Rakozy](https://unsplash.com/@grakozy), uploaded to [Unsplash](https://unsplash.com/photos/silhouette-photography-of-person-oMpAz-DN-9I)
+**"POTW3.jpg":** Image by [Greg Rakozy](https://unsplash.com/@grakozy), uploaded to [Unsplash](https://unsplash.com/photos/silhouette-photography-of-person-oMpAz-DN-9I)
 
-**"beachgallery.jpg"**: Image by [Asad Photo Maldives](https://www.pexels.com/@asadphoto/), uploaded to [Pexels](https://www.pexels.com/photo/beach-1449767/)
+**"beachgallery.jpg":** Image by [Asad Photo Maldives](https://www.pexels.com/@asadphoto/), uploaded to [Pexels](https://www.pexels.com/photo/beach-1449767/)
 
-**"Clear Water Standstill"**: Image by [Pietro De Grandi](https://unsplash.com/@peter_mc_greats), uploaded to [Unsplash](https://unsplash.com/photos/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime-T7K4aEPoGGk)
+**"Clear Water Standstill":** Image by [Pietro De Grandi](https://unsplash.com/@peter_mc_greats), uploaded to [Unsplash](https://unsplash.com/photos/three-brown-wooden-boat-on-blue-lake-water-taken-at-daytime-T7K4aEPoGGk)
 
-**"Rocky Canyon Pass"**: Image by [Jake Blucker](https://unsplash.com/@jakeblucker), uploaded to [Unsplash](https://unsplash.com/photos/black-concrete-road-surrounded-by-brown-rocks-tMzCrBkM99Y)
+**"Rocky Canyon Pass":** Image by [Jake Blucker](https://unsplash.com/@jakeblucker), uploaded to [Unsplash](https://unsplash.com/photos/black-concrete-road-surrounded-by-brown-rocks-tMzCrBkM99Y)
 
-**"Golden Sunset Beach"**: Image by [Sean Oulashin](https://unsplash.com/@oulashin), uploaded to [Unsplash](https://unsplash.com/photos/seashore-during-golden-hour-KMn4VEeEPR8)
+**"Golden Sunset Beach":** Image by [Sean Oulashin](https://unsplash.com/@oulashin), uploaded to [Unsplash](https://unsplash.com/photos/seashore-during-golden-hour-KMn4VEeEPR8)
 
-**Autumn Mist**: Image by [Luca Bravo](https://unsplash.com/@lucabravo), uploaded to [Unsplash](https://unsplash.com/photos/brown-house-near-body-of-water-zAjdgNXsMeg)
+**"Autumn Mist":** Image by [Luca Bravo](https://unsplash.com/@lucabravo), uploaded to [Unsplash](https://unsplash.com/photos/brown-house-near-body-of-water-zAjdgNXsMeg)
 
-**"Eye-catching Sunrise"**: Image by [Bailey Zindel](https://unsplash.com/@baileyzindel), uploaded to [Unsplash](https://unsplash.com/photos/river-in-yosemite-valley-at-low-light-NRQV-hBF10M)
+**"Eye-catching Sunrise":** Image by [Bailey Zindel](https://unsplash.com/@baileyzindel), uploaded to [Unsplash](https://unsplash.com/photos/river-in-yosemite-valley-at-low-light-NRQV-hBF10M)
 
-**"Savannah Hiking Trip"**: Image by [niko photos](https://unsplash.com/@niko_photos), uploaded to [Unsplash](https://unsplash.com/photos/green-leaf-tree-under-blue-sky-tGTVxeOr_Rs)
+**"Savannah Hiking Trip":** Image by [niko photos](https://unsplash.com/@niko_photos), uploaded to [Unsplash](https://unsplash.com/photos/green-leaf-tree-under-blue-sky-tGTVxeOr_Rs)
 
 
 
-The video material has been kindly provided by HikingFex.com.
-🔗 https://www.hikingfex.com/en/videos
+The video material has been kindly provided by HikingFex.com.  
+🔗 https://www.hikingfex.com/en/videos  
 Link to the used video: [Mountain Life | No Copyright Video | Royalty free mountain | Drone footage | mountain shots](https://youtu.be/ZK_kdlCo4yY?si=vb8jpkSDw_gzTPw9)
 
 
-**Libraries used in the application fall under MIT and ISC licenses, which permit use, copy, modify and/or distribution.**
-**For more information**:
-[MIT License](https://opensource.org/license/mit)
-[ISC License](https://opensource.org/license/isc)
+**Libraries used in the application fall under MIT and ISC licenses, which permit use, copy, modify and/or distribution.**  
+**For more information:**  
+- [MIT License](https://opensource.org/license/mit)
+- [ISC License](https://opensource.org/license/isc)  
 
 
 **Last updated 25.11.2026**
